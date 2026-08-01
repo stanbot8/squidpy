@@ -1,26 +1,30 @@
 from __future__ import annotations
 
+from importlib import import_module
 from importlib.metadata import version
+from typing import Any
 
 from packaging.version import Version
 
-_scanpy_mpl_settings = None
-_scanpy_settings = None
 
-try:
-    from scanpy.plotting.legacy import _utils as _scanpy_plotting_utils
-    from scanpy.plotting.legacy import mpl_settings as _scanpy_mpl_settings
-    from scanpy.plotting.legacy._tools.scatterplots import _add_categorical_legend as add_categorical_legend
-    from scanpy.plotting.legacy._tools.scatterplots import _panel_grid as panel_grid
-    from scanpy.plotting.legacy.palettes import default_102 as default_palette
-except ModuleNotFoundError as error:
-    if error.name != "scanpy.plotting.legacy":
-        raise
-    from scanpy import settings as _scanpy_settings
-    from scanpy.plotting import _utils as _scanpy_plotting_utils
-    from scanpy.plotting._tools.scatterplots import _add_categorical_legend as add_categorical_legend
-    from scanpy.plotting._tools.scatterplots import _panel_grid as panel_grid
-    from scanpy.plotting.palettes import default_102 as default_palette
+def _scanpy_plotting_layout() -> tuple[str, Any | None, Any | None]:
+    try:
+        legacy = import_module("scanpy.plotting.legacy")
+    except ModuleNotFoundError as error:
+        if error.name != "scanpy.plotting.legacy":
+            raise
+        return "scanpy.plotting", None, import_module("scanpy").settings
+    return "scanpy.plotting.legacy", legacy.mpl_settings, None
+
+
+_scanpy_plotting_path, _scanpy_mpl_settings, _scanpy_settings = _scanpy_plotting_layout()
+_scanpy_plotting_utils = import_module(f"{_scanpy_plotting_path}._utils")
+_scanpy_scatterplots = import_module(f"{_scanpy_plotting_path}._tools.scatterplots")
+_scanpy_palettes = import_module(f"{_scanpy_plotting_path}.palettes")
+
+add_categorical_legend = _scanpy_scatterplots._add_categorical_legend
+panel_grid = _scanpy_scatterplots._panel_grid
+default_palette = _scanpy_palettes.default_102
 
 __all__ = [
     # scanpy

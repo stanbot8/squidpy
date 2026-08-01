@@ -30,6 +30,38 @@ sc.set_figure_params(dpi=40, color_map="viridis")
 #    ".png" is appended to <your_filename>, no need to set it
 
 
+def test_scanpy_plotting_legacy_layout(monkeypatch: pytest.MonkeyPatch) -> None:
+    settings = object()
+    legacy = SimpleNamespace(mpl_settings=settings)
+    monkeypatch.setattr(compat, "import_module", lambda name: legacy)
+
+    assert compat._scanpy_plotting_layout() == ("scanpy.plotting.legacy", settings, None)
+
+
+def test_scanpy_plotting_released_layout(monkeypatch: pytest.MonkeyPatch) -> None:
+    settings = object()
+
+    def import_released(name: str):
+        if name == "scanpy.plotting.legacy":
+            raise ModuleNotFoundError(name=name)
+        return SimpleNamespace(settings=settings)
+
+    monkeypatch.setattr(compat, "import_module", import_released)
+
+    assert compat._scanpy_plotting_layout() == ("scanpy.plotting", None, settings)
+
+
+def test_scanpy_plotting_layout_preserves_import_errors(monkeypatch: pytest.MonkeyPatch) -> None:
+    def import_broken(name: str):
+        raise ModuleNotFoundError(name="scanpy_dependency")
+
+    monkeypatch.setattr(compat, "import_module", import_broken)
+
+    with pytest.raises(ModuleNotFoundError) as error:
+        compat._scanpy_plotting_layout()
+    assert error.value.name == "scanpy_dependency"
+
+
 @pytest.mark.parametrize(
     ("accessor", "legacy_name", "released_name"),
     [
