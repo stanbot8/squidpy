@@ -2,11 +2,9 @@ name: Test
 
 on:
   push:
-    branches:
-    - main
+    branches: [main]
   pull_request:
-    branches:
-    - main
+    branches: [main]
   schedule:
   - cron: 0 5 1,15 * *
 
@@ -121,9 +119,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os:
-        - ubuntu-latest
-        - macos-latest
+        os: [ubuntu-latest, macos-latest]
         env: ${{ fromJSON(needs.get-environments.outputs.envs) }}
         exclude:
         - os: macos-latest
@@ -301,7 +297,7 @@ jobs:
         AB_RUN_ID: ${{ github.run_id }}
         AB_HEAD_SHA: 1936a92b365790f27574d3902e30761645847686
         AB_WORKFLOW_DIGEST: 
-          18c8f28aa2817ff439be4feaf2f2c55f170795968039e74fb3716acb4ee4090a
+          8235de013ba8e89929895c0ddf1d8e1098c34c020f60579c47e4eb65664bda3a
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}
