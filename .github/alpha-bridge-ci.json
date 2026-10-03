@@ -1,0 +1,20 @@
+{
+  "definition_blob_sha1": {
+    ".github/workflows/alpha-bridge-ci-verify.yml": "0588ba302e7a97a9721ae7494f6b9aca053476b6",
+    ".github/workflows/test.yaml": "cd02ec09841ae4daccb9034f7cd2a816d263a64a"
+  },
+  "definition_sha256": {
+    ".github/workflows/alpha-bridge-ci-verify.yml": "d3dacd19a9c94cd86ca5ba24b075c35f3ff224d155ca5891f3b4325ece933dac",
+    ".github/workflows/test.yaml": "fa15f3d4815072ced7eca386920dd44b3b5b18f71fc4f3e586e43cb5ee13f30d"
+  },
+  "generator_sha256": "f238e5d52b0ec5c07f088af203f93698fbdea22a995856dc18c50f5365431353",
+  "schema": "alpha-bridge/fork-ci",
+  "source_branch": "main",
+  "source_commit": "1936a92b365790f27574d3902e30761645847686",
+  "source_repository": "scverse/squidpy",
+  "version": 1,
+  "workflows": [
+    ".github/workflows/alpha-bridge-ci-verify.yml",
+    ".github/workflows/test.yaml"
+  ]
+}
