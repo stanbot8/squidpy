@@ -1,13 +1,13 @@
 {
   "definition_blob_sha1": {
     ".github/workflows/alpha-bridge-ci-verify.yml": "21051178fb840f31162cde1a64943007a2178f3f",
-    ".github/workflows/test.yaml": "d4d2a9822aba5bd2f9d1c9d5d4ccf4ed3c199b38"
+    ".github/workflows/test.yaml": "0c063fa01e5a288577049fa8849e5d0c89654224"
   },
   "definition_sha256": {
     ".github/workflows/alpha-bridge-ci-verify.yml": "f1d0d506e1faf2ef9e00102fbf464fa1a74203bf3463e623621402b9de9e8a45",
-    ".github/workflows/test.yaml": "91d8e921cfc0ef0e08d973583077ddbb4f2bee18ee3d6b42d58f8355fc5b366f"
+    ".github/workflows/test.yaml": "3ef73c61e1d322d825d58ca0d8ee877998a773c2982b1be774bd9f9bfa39e1c9"
   },
-  "generator_sha256": "34bc8c1c1eb9b2799c6a06a6f7bd056799561a0342e1ccd9d7ec69c0f000ae82",
+  "generator_sha256": "9fe7eb2612d4c4d8436e5a627541cad32d0dcba429639855b5a0a2af04b9729a",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
   "source_commit": "1936a92b365790f27574d3902e30761645847686",

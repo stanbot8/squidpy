@@ -62,7 +62,9 @@ jobs:
     - name: Download datasets
         # Always run to ensure any missing files are downloaded
         # (restore-keys may provide partial cache)
-      run: uvx hatch run data:download
+      run: |-
+        uvx hatch run data:download
+
 
   # Get the test environment from hatch as defined in pyproject.toml.
   # This ensures that the pyproject.toml is the single point of truth for test definitions and the same tests are
@@ -148,7 +150,9 @@ jobs:
         cache-dependency-glob: pyproject.toml
 
     - name: Ensure figure directory exists
-      run: mkdir -p "$GITHUB_WORKSPACE/tests/figures"
+      run: |-
+        mkdir -p "$GITHUB_WORKSPACE/tests/figures"
+
 
     - name: Restore data cache
       id: data-cache
@@ -172,16 +176,22 @@ jobs:
 
     - name: System dependencies (macOS)
       if: matrix.os == 'macos-latest'
-      run: brew install automake
+      run: |-
+        brew install automake
+
 
     - name: create hatch environment
-      run: uvx hatch env create ${{ matrix.env.name }}
+      run: |-
+        uvx hatch env create ${{ matrix.env.name }}
+
 
     - name: run tests using hatch
       env:
         PLATFORM: ${{ matrix.os }}
         DISPLAY: :42
-      run: uvx hatch run ${{ matrix.env.name }}:run -v --color=yes -n auto
+      run: |-
+        uvx hatch run ${{ matrix.env.name }}:run -v --color=yes -n auto
+
 
     - name: Archive figures generated during testing
       if: always()
@@ -218,7 +228,9 @@ jobs:
         cache-dependency-glob: pyproject.toml
 
     - name: Ensure figure directory exists
-      run: mkdir -p "$GITHUB_WORKSPACE/tests/figures"
+      run: |-
+        mkdir -p "$GITHUB_WORKSPACE/tests/figures"
+
 
     - name: Restore data cache
       id: coverage-data-cache
@@ -240,7 +252,9 @@ jobs:
         sudo Xvfb :42 -screen 0 1920x1080x24 -ac +extension GLX </dev/null &
 
     - name: create hatch environment
-      run: uvx hatch env create hatch-test.py3.14-stable
+      run: |-
+        uvx hatch env create hatch-test.py3.14-stable
+
 
     - name: run coverage tests
       env:
@@ -297,7 +311,7 @@ jobs:
         AB_RUN_ID: ${{ github.run_id }}
         AB_HEAD_SHA: 1936a92b365790f27574d3902e30761645847686
         AB_WORKFLOW_DIGEST: 
-          8235de013ba8e89929895c0ddf1d8e1098c34c020f60579c47e4eb65664bda3a
+          374719e23d2cb9ab7183c1d5a3ad27e5fa2625c6f55acd5b4e290cd6fb9b24a1
         AB_EVENT: ${{ github.event_name }}
         AB_SCHEDULE: ${{ github.event.schedule || '' }}
         AB_VARIABLES: ${{ toJSON(vars) }}
