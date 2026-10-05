@@ -1,13 +1,19 @@
 {
   "definition_blob_sha1": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "d0cf89303388ac1271c908436e9f4bfe75bae884",
-    ".github/workflows/test.yaml": "4da4e50b9c8f967408914a04770731c3cfdd6e2e"
+    ".github/workflows/alpha-bridge-ci-verify.yml": "d19efeb3bd029beb4c50fd874010d2b930d20715",
+    ".github/workflows/build.yaml": "9e93ac0adfb587a7e4887c9e138cc4e06b19e67b",
+    ".github/workflows/release.yaml": "46c1db751e041d71101703d2ce0032ef95a5a0f4",
+    ".github/workflows/test-notebooks.yaml": "b6cb6bfd27f287008208cb4166473917571275e9",
+    ".github/workflows/test.yaml": "43e9e27e3ab35c290515fe84697223ec633e6a89"
   },
   "definition_sha256": {
-    ".github/workflows/alpha-bridge-ci-verify.yml": "99e25329cff2a8ae245f2f99850472bdd82f571c3bc33fadfc5ac11b9f29cb7e",
-    ".github/workflows/test.yaml": "98f90317a9543b4a6100a4dbe99be7413ca0cabf6ff68fcb674f914d75bee7cb"
+    ".github/workflows/alpha-bridge-ci-verify.yml": "8fde9e2f5e1b37bbbb22794427ac6d217d8b18bc857606edd0b072e89c58b436",
+    ".github/workflows/build.yaml": "32770b46bb192e05faef482b0017d3708a056c4978277868304b855b3474f9b6",
+    ".github/workflows/release.yaml": "0f92f5fe72026f31ec5e1ff0b2934d244d8c50c9fa40a43e3bae71cb9972d7c4",
+    ".github/workflows/test-notebooks.yaml": "4aa2426bf70e05442a9e3a2fdf3ce0851a0b653c5f525cb280cd7cdb300313ac",
+    ".github/workflows/test.yaml": "e3947d6098cd8e4327cb7f6998ed78802dc00b3fdd6df11ac315867f5593981f"
   },
-  "generator_sha256": "8bff038bcb711330ba78bf433a2923d57d4ddfeedd59b8324e44e2a59f6b0389",
+  "generator_sha256": "f9d11fba5b604bac754f7ab7e40ccde549adf8e029da2ca91ed14e9ab94c0775",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
   "source_commit": "1936a92b365790f27574d3902e30761645847686",
@@ -15,6 +21,9 @@
   "version": 1,
   "workflows": [
     ".github/workflows/alpha-bridge-ci-verify.yml",
+    ".github/workflows/build.yaml",
+    ".github/workflows/release.yaml",
+    ".github/workflows/test-notebooks.yaml",
     ".github/workflows/test.yaml"
   ]
 }
