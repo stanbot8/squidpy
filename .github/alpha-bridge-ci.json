@@ -4,26 +4,26 @@
     ".github/workflows/alpha-bridge-ci-consumer.yml": "dd3245f3a2a4027e71859a2e51513d2203429d3f",
     ".github/workflows/alpha-bridge-ci-probe.yml": "aaccb32547883d4905e9c1e9f5b1907dbeaa9730",
     ".github/workflows/alpha-bridge-ci-verify.yml": "97dd816b899c13f4586bd83fd63ef410f5cc750c",
-    ".github/workflows/build.yaml": "d3fd43079233d72a33eae0579bf84a2490c19250",
+    ".github/workflows/build.yaml": "9047e2f7b1b4f1e198a27bea2c0097cf010bc550",
     ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "0bc7db45c659d81ffd602bbfd39f8bf7d657cecf",
-    ".github/workflows/release.yaml": "195606cb3f0646ff891340cb2b904ceff321b925",
-    ".github/workflows/test-notebooks.yaml": "608b25e625adca878d6d2634bf26e4db5226347e",
-    ".github/workflows/test.yaml": "355b5023e1afa2ff5ea26344f795f7bf168d3c35"
+    ".github/workflows/release.yaml": "7fd9e7c2407a81a09e8a7e15732bd5e2e007cc65",
+    ".github/workflows/test-notebooks.yaml": "832a1362757abc8522b6d6a913a4fe085c496797",
+    ".github/workflows/test.yaml": "0dc811b5a58d32699424119db3419df39b297fa0"
   },
   "definition_sha256": {
     ".github/workflows/alpha-bridge-ci-consumer.yml": "701dc471ca557edf1d75e39d83db1a368f1aaf1c9609c4d52cc803ac9901c03d",
     ".github/workflows/alpha-bridge-ci-probe.yml": "ad96a7443de016087fa573620462807da8562856c36b566614cd747f1e904588",
     ".github/workflows/alpha-bridge-ci-verify.yml": "25578ca86e98ceeb86fbcb238fdec0731d9d0ffe1580f65aa2e0000f41ff9a56",
-    ".github/workflows/build.yaml": "c2b813c161b838817587109f831ad7891b4b543f9aedc720facb611553a988b2",
+    ".github/workflows/build.yaml": "f94ef1ce9fbcdf9cafe9495e485c20232b4abdee18f89924cd236ad8eb711a26",
     ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "dfb02ee69a2ce5279d5829f43ffa95d9a86b91e7d04604de461113b36787a7a9",
-    ".github/workflows/release.yaml": "9ba93c7a3aa7ed6c1a29cf49673c5c9a643581af89c889b090427ed1e8cfddd3",
-    ".github/workflows/test-notebooks.yaml": "16abb41cc40622c89fd6500a4c6348faeacf91e5cf41721923e4c158919b2739",
-    ".github/workflows/test.yaml": "52ba68c9676e475f3114314c37d996d79967311efd41b849846e54bd110e25d9"
+    ".github/workflows/release.yaml": "1597e77d1058212b3ac021ebb69ea51230012dff6d7a2f8903ab5a4b11b9d27b",
+    ".github/workflows/test-notebooks.yaml": "cac2c5f1c1f4c4d764d4c0c95d6d78807184e580386a465d779770552a082b70",
+    ".github/workflows/test.yaml": "a7784710997df39f0d3aa085711a4f002365b5f3a528ae1fabe28975edadd517"
   },
   "generator_sha256": "57bbc5a594aacb9fe71e1c3ebf2678e841494ad1ede64e1a822c3e835b196631",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
-  "source_commit": "1936a92b365790f27574d3902e30761645847686",
+  "source_commit": "25eacd2beb83934957aa0d6f034ecde3ede7864e",
   "source_repository": "scverse/squidpy",
   "version": 1,
   "workflows": [
