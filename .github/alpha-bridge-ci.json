@@ -1,31 +1,37 @@
 {
   "default_workflow_permissions": "read",
   "definition_blob_sha1": {
-    ".github/workflows/alpha-bridge-ci-probe.yml": "f77ab4ad7b56a3571281506f6969a1e9889e556a",
-    ".github/workflows/alpha-bridge-ci-verify.yml": "95760790304a2bad6d6820ee35e70aafba80f356",
-    ".github/workflows/build.yaml": "0bbf190bb82290cfb41401bb5485ea0b6a3a7842",
-    ".github/workflows/release.yaml": "64eea9ebcb6539e14c9e6193e8ed212616995c89",
-    ".github/workflows/test-notebooks.yaml": "7138cd5ec99d60299ec47aa37654b27db52fb19c",
-    ".github/workflows/test.yaml": "413ea267933da92f096b6b1e8dcabefdf8e61eb5"
+    ".github/workflows/alpha-bridge-ci-consumer.yml": "dd3245f3a2a4027e71859a2e51513d2203429d3f",
+    ".github/workflows/alpha-bridge-ci-probe.yml": "aaccb32547883d4905e9c1e9f5b1907dbeaa9730",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "97dd816b899c13f4586bd83fd63ef410f5cc750c",
+    ".github/workflows/build.yaml": "d3fd43079233d72a33eae0579bf84a2490c19250",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "0bc7db45c659d81ffd602bbfd39f8bf7d657cecf",
+    ".github/workflows/release.yaml": "195606cb3f0646ff891340cb2b904ceff321b925",
+    ".github/workflows/test-notebooks.yaml": "608b25e625adca878d6d2634bf26e4db5226347e",
+    ".github/workflows/test.yaml": "355b5023e1afa2ff5ea26344f795f7bf168d3c35"
   },
   "definition_sha256": {
-    ".github/workflows/alpha-bridge-ci-probe.yml": "90f1497e0c8964df7ce687e21d00ea5f4472246fbbdbf3aa21826960efbb18c2",
-    ".github/workflows/alpha-bridge-ci-verify.yml": "4b1ca9d589df4e671637798677985a2baf15c4607d71689df399a109b491e0a2",
-    ".github/workflows/build.yaml": "fa37428695c07d56721f600375e47b1ca0e009c1eaf0fd5e9218e35398e56b63",
-    ".github/workflows/release.yaml": "7a031a1393e72909a7b7d1d33544856f9d85e6d14dabd743a852b6b79526db50",
-    ".github/workflows/test-notebooks.yaml": "b3589841d0b67b241ca4c839fd1a75e7396bd001dd96e8711925ff2167b52849",
-    ".github/workflows/test.yaml": "8ef248b4bf1369b3c9773a62d0d47681d503e21111f98b68301c2270c5b51213"
+    ".github/workflows/alpha-bridge-ci-consumer.yml": "701dc471ca557edf1d75e39d83db1a368f1aaf1c9609c4d52cc803ac9901c03d",
+    ".github/workflows/alpha-bridge-ci-probe.yml": "ad96a7443de016087fa573620462807da8562856c36b566614cd747f1e904588",
+    ".github/workflows/alpha-bridge-ci-verify.yml": "25578ca86e98ceeb86fbcb238fdec0731d9d0ffe1580f65aa2e0000f41ff9a56",
+    ".github/workflows/build.yaml": "c2b813c161b838817587109f831ad7891b4b543f9aedc720facb611553a988b2",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml": "dfb02ee69a2ce5279d5829f43ffa95d9a86b91e7d04604de461113b36787a7a9",
+    ".github/workflows/release.yaml": "9ba93c7a3aa7ed6c1a29cf49673c5c9a643581af89c889b090427ed1e8cfddd3",
+    ".github/workflows/test-notebooks.yaml": "16abb41cc40622c89fd6500a4c6348faeacf91e5cf41721923e4c158919b2739",
+    ".github/workflows/test.yaml": "52ba68c9676e475f3114314c37d996d79967311efd41b849846e54bd110e25d9"
   },
-  "generator_sha256": "4bbd1a1f9315d134cec261dd0580b504db191355193dfc428c3ca0ac65bb6b74",
+  "generator_sha256": "57bbc5a594aacb9fe71e1c3ebf2678e841494ad1ede64e1a822c3e835b196631",
   "schema": "alpha-bridge/fork-ci",
   "source_branch": "main",
   "source_commit": "1936a92b365790f27574d3902e30761645847686",
   "source_repository": "scverse/squidpy",
   "version": 1,
   "workflows": [
+    ".github/workflows/alpha-bridge-ci-consumer.yml",
     ".github/workflows/alpha-bridge-ci-probe.yml",
     ".github/workflows/alpha-bridge-ci-verify.yml",
     ".github/workflows/build.yaml",
+    ".github/workflows/crucible-call-alpha-bridge-ci-probe.yml",
     ".github/workflows/release.yaml",
     ".github/workflows/test-notebooks.yaml",
     ".github/workflows/test.yaml"
